@@ -25,13 +25,10 @@ class Solution:
         currSum += root.val
         # action
         path.append(root.val)
-        print(path)
         
         if root.left is None and root.right is None:
             if currSum == targetSum:
                 new_path = path[:]
-                print('successful paths')
-                print(new_path)
                 self.res.append(new_path)
         # recurse part 
         self.dfs(root.left, currSum, targetSum, path)
